@@ -1,0 +1,58 @@
+{
+  "production": {
+    "use_lightgbm": true,
+    "use_randomforest": true,
+    "use_autoencoder": true,
+    "min_confidence_threshold": 0.85,
+    "anomaly_threshold": 0.010397977195680141,
+    "alert_levels": {
+      "CRITICAL": [
+        "Heartbleed",
+        "Infiltration"
+      ],
+      "HIGH": [
+        "DDoS",
+        "DoS",
+        "Botnet"
+      ],
+      "MEDIUM": [
+        "BruteForce",
+        "WebAttack",
+        "PortScan"
+      ],
+      "LOW": [
+        "BENIGN"
+      ]
+    }
+  },
+  "preprocessing": {
+    "features": [
+      "Packet Length Mean",
+      "Init_Win_bytes_backward",
+      "Total Length of Fwd Packets",
+      "Fwd Packet Length Max",
+      "Packet Length Variance",
+      "Fwd Packet Length Mean",
+      "Bwd Packets/s",
+      "Flow IAT Max",
+      "Flow Bytes/s",
+      "Max Packet Length",
+      "Init_Win_bytes_forward",
+      "Flow Duration",
+      "Destination Port",
+      "Flow IAT Mean",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Max",
+      "Fwd Packet Length Std",
+      "Total Backward Packets",
+      "Total Fwd Packets",
+      "Fwd IAT Std",
+      "min_seg_size_forward",
+      "act_data_pkt_fwd",
+      "Fwd IAT Min",
+      "Flow IAT Min"
+    ],
+    "scaler_robust_file": "scaler_robust.joblib",
+    "scaler_minmax_file": "scaler_minmax.joblib"
+  }
+}
